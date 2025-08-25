@@ -70,9 +70,9 @@ app.use((req, res) => {
 
 
 
-// (async () => {
-//   await createContactsTable();
-// })();
+(async () => {
+  await createContactsTable();
+})();
 
 
 app.use((err, req, res, next) => {
