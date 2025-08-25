@@ -8,7 +8,7 @@ import dotenv from "dotenv";
 import hpp from "hpp";
 import { handlePostgresError } from "./middleware/error.middleware.js";
 import userIdentity from ".//services/user-services/user.router.js"
-// import createContactsTable from "./models/db.init.js";
+import createContactsTable from "./models/db.init.js";
 
 dotenv.config();
 
