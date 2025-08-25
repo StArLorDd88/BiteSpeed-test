@@ -1,0 +1,32 @@
+{
+  "name": "backend_setup",
+  "version": "1.0.0",
+  "description": "production grade backend setup ready",
+  "repository": {
+    "type": "git",
+    "url": "yes"
+  },
+  "license": "ISC",
+  "author": "himanshu",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "node index.js"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "express-mongo-sanitize": "^2.2.0",
+    "express-rate-limit": "^7.5.0",
+    "express-validator": "^7.2.1",
+    "helmet": "^8.1.0",
+    "hpp": "^0.2.3",
+    "joi": "^18.0.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.10",
+    "pg": "^8.16.3"
+  }
+}
