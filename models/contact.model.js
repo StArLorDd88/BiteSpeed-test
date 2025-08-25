@@ -1,4 +1,3 @@
-// models/contactModel.js
 import pool from "../config/db.config.js";
 
 export async function withTx(fn) {

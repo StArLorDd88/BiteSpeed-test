@@ -6,6 +6,9 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import dotenv from "dotenv";
 import hpp from "hpp";
+import { handlePostgresError } from "./middleware/error.middleware.js";
+import userIdentity from ".//services/user-services/user.router.js"
+// import createContactsTable from "./models/db.init.js";
 
 dotenv.config();
 
@@ -55,12 +58,21 @@ app.get("/test", (req, res) => {
 });
 
 
+app.use("/api/v1", userIdentity);
+
+
 app.use((req, res) => {
   res.status(404).json({
     status: "error",
     message: "Route not found",
   });
 });
+
+
+
+// (async () => {
+//   await createContactsTable();
+// })();
 
 
 app.use((err, req, res, next) => {
